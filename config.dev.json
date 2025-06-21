@@ -12,58 +12,36 @@
 	"antiInbox": true,
 	"language": "en",
 	"notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-	"nickNameBot": "FAHAD",
+	"nickNameBot": "AHMED-TARIF-BOT",
 	"prefix": "-",
 	"adminOnly": {
 		"enable": false,
 		"ignoreCommand": []
 	},
 	"adminBot": [
-    "61552422054139",
-    "61561798011247",
-    "61574117474714"
-  ],
-   "tarifBot": [
-     "28299296482990983"
+		"61561798011247",
+		
+		"61552422054139"
 	],
-  "notes": "YOUR GROUP ID or Tid ID SET NOW , BECAUSE BOT LOGS MESSAGE SENT YOUR GROUP",
-  "rubishapi": "https://rubish-apihub.onrender.com/rubish",
-  "diptoapi": "https://d1pt0-call-bomber.onrender.com/dipto?",
-  "GOD": [
-    "61552422054139",
-    "",
-    ""
-  ],
-  "DEV": [
-    "61552422054139",
-    "61561798011247",
-    "",
-    ""
-  ],
-  "whiteListMode": {
-    "enable": false,
-    "whiteListIds": [
-      "61552422054139",
-      "",
-      "",
-      ""
-    ],
-    "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
-  },
-  "whiteListModeThread": {
-    "enable": false,
-    "whiteListThreadIds": [
-      "61552422054139",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
-    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
-  },
+	"nisanBot": [
+		"28299296482990983"
+	],
+	"notes": "YOUR GROUP ID or Tid ID SET NOW , BECAUSE BOT LOGS MESSAGE SENT YOUR GROUP",
+	"whiteListMode": {
+		"enable": false,
+		"whiteListIds": [
+			""
+		],
+		"notes": "if you enable this feature, only the ids in the whiteListIds list can use the bot"
+	},
+	"whiteListModeThread": {
+		"enable": false,
+		"whiteListThreadIds": [
+			""
+		],
+		"notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
+		"how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
+	},
   "database": {
     "type": "mongodb",
     "uriMongodb": "mongodb+srv://bossbayjid14:sEo1K5APEmI3h9ke@cluster0.vombiex.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
