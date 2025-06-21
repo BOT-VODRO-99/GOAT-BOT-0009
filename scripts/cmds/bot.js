@@ -94,7 +94,7 @@ module.exports = {
 
       if (prefixes.some((prefix) => dipto.startsWith(prefix))) {
         setTimeout(function () {
-          api.setMessageReaction("🥵", event.messageID, (err) => {}, true);
+          api.setMessageReaction("📝", event.messageID, (err) => {}, true);
         }, 400);
         api.sendTypingIndicator(event.threadID, true);
 
