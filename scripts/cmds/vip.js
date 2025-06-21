@@ -7,7 +7,7 @@ module.exports = {
 		version: "5.1.0",
 		author: "AHMED TARIF",
 		countDown: 5,
-		role: 2,
+		role: 0,
 		description: "Add, remove, edit vip role",
 		category: "TARIF",
 		guide: ' {pn} [add | -a] <uid | @tag>: Add Vip role for user'
