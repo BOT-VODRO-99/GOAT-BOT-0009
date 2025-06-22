@@ -1,3 +1,4 @@
+
 {
 	"facebookAccount": {
 		"email": "",
@@ -19,32 +20,53 @@
 		"ignoreCommand": []
 	},
 	"adminBot": [
-		"61561798011247",
-		
-		"61552422054139"
+    "61552422054139",
+    ""
+  ],
+	"tarifBot": [
+     "28299296482990983"
 	],
-	"nisanBot": [
-		"28299296482990983"
-	],
-	"notes": "YOUR GROUP ID or Tid ID SET NOW , BECAUSE BOT LOGS MESSAGE SENT YOUR GROUP",
-	"whiteListMode": {
-		"enable": false,
-		"whiteListIds": [
-			""
-		],
-		"notes": "if you enable this feature, only the ids in the whiteListIds list can use the bot"
-	},
-	"whiteListModeThread": {
-		"enable": false,
-		"whiteListThreadIds": [
-			""
-		],
-		"notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
-		"how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
-	},
+  "notes": "YOUR GROUP ID or Tid ID SET NOW , BECAUSE BOT LOGS MESSAGE SENT YOUR GROUP",
+  "rubishapi": "https://rubish-apihub.onrender.com/rubish",
+  "diptoapi": "https://d1pt0-call-bomber.onrender.com/dipto?",
+  "GOD": [
+    "61552422054139",
+    "",
+    ""
+  ],
+  "DEV": [
+    "61552422054139",
+    "",
+    "",
+    ""
+  ],
+  "whiteListMode": {
+    "enable": false,
+    "whiteListIds": [
+      "61552422054139",
+      "",
+      "",
+      ""
+    ],
+    "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
+  },
+  "whiteListModeThread": {
+    "enable": false,
+    "whiteListThreadIds": [
+      "61552422054139",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
+    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
+  },
   "database": {
     "type": "mongodb",
-    "uriMongodb": "mongodb+srv://bossbayjid14:sEo1K5APEmI3h9ke@cluster0.vombiex.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "uriMongodb": "mongodb+srv://kumarorithi:IDOLL-ANTHONY-URI-12@cluster0.hwu7q.mongodb.net/",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true,
     "notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
