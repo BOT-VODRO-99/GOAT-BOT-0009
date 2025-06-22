@@ -23,8 +23,8 @@ module.exports = {
         en: {
             listAdmin: "👑 | 𝐁𝐨𝐭 𝐀𝐝𝐦𝐢𝐧𝐬 & 𝐎𝐩𝐞𝐫𝐚𝐭𝐨𝐫𝐬 | 👑"
                 + "\n ___________________"
-                + "\n♕︎| 	𝐎𝐖𝐍𝐄𝐑\n____________\n ⌬| ︎MOHAMMAD ARAFAT"
-                +"\n╰=> 61552422054139"
+                + "\n♕︎| 	𝐎𝐖𝐍𝐄𝐑\n____________\n ⌬| ︎Mr Tʌʀɩʆ Ƴt"
+                +"\n╰=> 100081491574719"
                 + "\n _____________________________"
                 + "\n♲︎︎︎| 𝐎𝐩𝐞𝐫𝐚𝐭𝐨𝐫𝐬"
                 +"\n____________"
@@ -32,13 +32,13 @@ module.exports = {
                 + "\n _____________________________"
                 + "\n"
                 + "\n ",
-            noAdmin: "⚠ | No admins found!",
+            noAdmin: "⚠️ | No admins found!",
             added: "✅ | Added admin role for %1 users:\n%2",
-            alreadyAdmin: "\n⚠ | %1 users already have admin role:\n%2",
-            missingIdAdd: "⚠ | Please provide an ID, tag a user, or reply to a message to add admin role",
+            alreadyAdmin: "\n⚠️ | %1 users already have admin role:\n%2",
+            missingIdAdd: "⚠️ | Please provide an ID, tag a user, or reply to a message to add admin role",
             removed: "✅ | Removed admin role from %1 users:\n%2",
-            notAdmin: "⚠ | %1 users do not have admin role:\n%2",
-            missingIdRemove: "⚠ | Please provide an ID, tag a user, or reply to a message to remove admin role",
+            notAdmin: "⚠️ | %1 users do not have admin role:\n%2",
+            missingIdRemove: "⚠️ | Please provide an ID, tag a user, or reply to a message to remove admin role",
             notAllowed: "⛔ | You don't have permission to use this command!"
         }
     },
@@ -120,4 +120,38 @@ module.exports = {
                     uids = args.filter(arg => !isNaN(arg));
                 }
 
-  
+                if (uids.length === 0) {
+                    return message.reply(getLang("missingIdRemove"));
+                }
+
+                const removedAdmins = [];
+                const notAdmins = [];
+
+                for (const uid of uids) {
+                    if (config.adminBot.includes(uid)) {
+                        removedAdmins.push(uid);
+                        config.adminBot.splice(config.adminBot.indexOf(uid), 1);
+                    } else {
+                        notAdmins.push(uid);
+                    }
+                }
+
+                writeFileSync(global.client.dirConfig, JSON.stringify(config, null, 2));
+
+                const removedAdminNames = await Promise.all(removedAdmins.map(uid => usersData.getName(uid)));
+                const notAdminNames = await Promise.all(notAdmins.map(uid => usersData.getName(uid)));
+
+                return message.reply(
+                    (removedAdmins.length > 0 ? 
+                        getLang("removed", removedAdmins.length, removedAdminNames.map(name => `• ${name}`).join("\n")) : "") +
+                    (notAdmins.length > 0 ? 
+                        getLang("notAdmin", notAdmins.length, notAdminNames.map(name => `• ${name}`).join("\n")) : "")
+                );
+            }
+
+            default: {
+                return message.reply("⚠️ | Invalid command! Use 'list', 'add' or 'remove'.");
+            }
+        }
+    }
+};
